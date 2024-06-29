@@ -14,7 +14,6 @@ const stripeController = async (req, res) => {
         amount: totalPurchase(),
         currency: 'usd',
     });
-    console.log(paymentIntent.client_secret);
     res.status(StatusCodes.OK).json({ clientSecret: paymentIntent.client_secret })
 }
 
